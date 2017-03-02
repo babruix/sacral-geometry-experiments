@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <a href="/">Box shadow</a>
+    <a href="#/canvas">Canvas</a>
     <router-view></router-view>
   </div>
 </template>
@@ -23,7 +25,7 @@ export default {
 body {
   padding: 0;
   margin: 0;
-  background-color: black;
+  /*background-color: black;*/
 }
 
 canvas {
