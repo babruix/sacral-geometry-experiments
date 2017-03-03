@@ -9,7 +9,7 @@
   var canvas, ctx, colorspeed, target, speed, width, height, diameter, radius, center, length, divisions, rainbow, rlength;
 
   export default {
-    name: 'test',
+    name: 'Canvas1',
     data () {
       return {
         currentFrame: 0
@@ -79,7 +79,6 @@
     },
     mounted: function () {
       canvas = document.getElementById('canvas');
-      console.log(canvas);
       ctx = canvas.getContext("2d");
       ctx.fillStyle = "#000";
       ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
