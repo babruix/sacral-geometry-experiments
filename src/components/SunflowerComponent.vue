@@ -3,8 +3,12 @@
     <canvas id="canvas" width="600" height="600"></canvas>
     <div>
       Size: <input id="slider" min="70" type="range" max="2000" value="2000" v-model="seeds"/>
-      Radius: <input type="text" v-model="radius"/> ( you can use expressions, like "Math.cos(theta)* Math.sin(theta) * this.PHI *25")
-      Rotate: <input type="checkbox" v-model="rotateOn">
+      Rotate: <input type="checkbox" v-model="rotateOn" width="200px">
+      Radius: <input type="text" v-model="radius"/>
+      you can use <a href="#/canvas3" @click.prevent="setRadiusExpression()">expressions</a>
+      or  <a href="#/canvas3" @click.prevent="setRadiusExpression(3)">number</a>
+
+
     </div>
   </div>
 </template>
@@ -21,7 +25,11 @@
         radius: 2,
       }
     },
-    methods: {},
+    methods: {
+      setRadiusExpression: function (number) {
+        this.radius = number || 'Math.cos(theta) * Math.sin(theta) * this.PHI * 25';
+      }
+    },
     watch: {
       seeds() {
         this.sunflower.seeds = this.seeds;
@@ -56,7 +64,5 @@
     margin: 0 10px;
   }
 
-  a {
-    color: #42b983;
-  }
+
 </style>

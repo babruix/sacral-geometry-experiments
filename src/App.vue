@@ -3,7 +3,7 @@
     <a href="/">Box shadow 1</a>
     <a href="#/canvas">Canvas 1</a>
     <a href="#/canvas2">Canvas 2</a>
-    <a href="#/canvas3">Canvas 3</a>
+    <a href="#/sunflower">Sunflower</a>
     <router-view></router-view>
   </div>
 </template>
@@ -20,8 +20,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
+}
+a {
+  color: white;
 }
 
 body {
