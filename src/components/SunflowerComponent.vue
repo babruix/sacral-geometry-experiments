@@ -15,6 +15,7 @@
 
 <script>
   import Sunflower from './Sunflower'
+  import ComponentAnim from './ComponentAnimation'
 
   export default {
     name: 'Canvas3',
@@ -44,6 +45,7 @@
     mounted: function () {
       this.sunflower = new Sunflower('canvas');
       this.sunflower.animate();
+      ComponentAnim();
     }
   }
 </script>

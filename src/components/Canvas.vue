@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import ComponentAnim from './ComponentAnimation'
 
   var canvas, ctx, colorspeed, target, speed, width, height, diameter, radius, center, length, divisions, rainbow, rlength;
 
@@ -103,6 +104,8 @@
         timestamp: 0
       };
       window.requestAnimationFrame(this.drawFrame);
+
+      ComponentAnim();
     }
   }
 </script>

@@ -9,31 +9,37 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import ComponentAnim from './components/ComponentAnimation'
+
+  export default {
+    name: 'app',
+    mounted: function () {
+      ComponentAnim();
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: white;
-  margin-top: 60px;
-}
-a {
-  color: white;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+  }
 
-body {
-  padding: 0;
-  margin: 0;
-  background-color: black;
-}
+  a {
+    color: white;
+  }
 
-canvas {
-  vertical-align: top;
-}
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+  }
+
+  canvas {
+    vertical-align: top;
+  }
 </style>
