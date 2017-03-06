@@ -32,15 +32,15 @@
         }
         var factor = timestamp / colorspeed;
         ctx.fillRect(0, 0, width, height);
+        let c = this.hexToRgb(timestamp);
         for (var i = 0; i < length; i++) {
           var point = {};
-          point.r = 100;
-          point.t = (360 / divisions * i + factor * i) * Math.PI / 180;
+          point.r = 200;
+          point.t = (360 / divisions * i + factor * i) * Math.PI / 90;
           point.x = point.r * Math.cos(point.t) + center.x;
           point.y = point.r * Math.sin(point.t) + center.y;
           ctx.beginPath();
 
-          var c = {'r': 10, g: 100, 'b': 50};
           ctx.strokeStyle = "rgba(" + c.r + ", " + c.g + ", " + c.b + ", 0.5)";
 
           ctx.moveTo(prev.x, prev.y);
@@ -50,8 +50,16 @@
           prev.y = point.y;
         }
         window.requestAnimationFrame(this.drawFrame);
-      }
+      },
 
+      hexToRgb: function (hex) {
+        var bigint = parseInt(hex, 16);
+        var r = (bigint >> 16) & 255;
+        var g = (bigint >> 8) & 255;
+        var b = bigint & 255;
+
+        return {r, g, b};
+      }
     },
     mounted: function () {
       canvas = document.getElementById('canvas');

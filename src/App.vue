@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="/">Box shadow 1</a>
+    <a href="#/">Box shadow 1</a>
     <a href="#/canvas">Canvas 1</a>
     <a href="#/canvas2">Canvas 2</a>
     <a href="#/sunflower">Sunflower</a>
