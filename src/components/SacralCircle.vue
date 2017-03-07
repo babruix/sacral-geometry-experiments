@@ -43,7 +43,7 @@
           , cx = width / 2
           , cy = height / 2
           , hue_incr = this.currentFrame * .0002 + .1
-          , angle_offset = this.currentFrame * .01
+          , angle_offset = this.currentFrame * .005
 
         for (var i = 1; i <= nbr_circles; ++i) {
 
@@ -105,6 +105,11 @@
     left: 50%;
     border-radius: 50%;
     animation: ani 2s ease-in-out infinite alternate;
+    will-change: box-shadow, transform;
   }
 
+  @keyframes ani {
+    0%   { transform: scaleX(1.1); }
+    100% { transform: scaleX(-0.3); }
+  }
 </style>
