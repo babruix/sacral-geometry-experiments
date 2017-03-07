@@ -7,8 +7,6 @@
       Radius: <input type="text" v-model="radius"/>
       you can use <a href="#/canvas3" @click.prevent="setRadiusExpression()">expressions</a>
       or  <a href="#/canvas3" @click.prevent="setRadiusExpression(3)">number</a>
-
-
     </div>
   </div>
 </template>

@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
-    <div id="rangeSlider">
-      {{currentFrame}}
-      <input style="width: 500px" type="range" min="1" max="1000" step="1" v-model="currentFrame">
-    </div>
+    Frame: {{ currentFrame }}
     <div class="boo" v-bind:style="booStyle"></div>
   </div>
 </template>
@@ -17,14 +14,20 @@
         currentFrame: 0
       }
     },
-    methods: {},
+    methods: {
+      drawFrame: function () {
+        this.currentFrame++;
+        window.requestAnimationFrame(this.drawFrame);
+      }
+    },
+    mounted: function () {
+      window.requestAnimationFrame(this.drawFrame);
+    },
     computed: {
 
       booStyle() {
-
         let width = 30
           , height = 30
-          , frame_number = this.currentFrame
           , boxShadowInitial = ''
           , nbr_circles = 150
           , deviation = 5 / 8.0
@@ -39,8 +42,8 @@
           , fudge = .87
           , cx = width / 2
           , cy = height / 2
-          , hue_incr = frame_number * .0002 + .1
-          , angle_offset = frame_number * .01
+          , hue_incr = this.currentFrame * .0002 + .1
+          , angle_offset = this.currentFrame * .01
 
         for (var i = 1; i <= nbr_circles; ++i) {
 
@@ -63,26 +66,11 @@
             boxShadowInitial += ', ';
           }
           boxShadowInitial += `${x}em ${y}em 0 ${sm_rad * fudge}em hsl(${hue}, 100%, 50%)`
-
-          var self = this;
-          setInterval(function () {
-            self.currentFrame++;
-            if (self.currentFrame > 1000) {
-              self.currentFrame = 0;
-            }
-          }, 60);
         }
 
         return {
-          'margin': -width / 2 + 'em',
-          'width': 0.2 + 'em',
-          'height': 0.2 + 'em',
           'box-shadow': boxShadowInitial,
-          'position': 'fixed',
-          'top': '50%',
-          'left': '50%',
-          'border-radius': '50%',
-          'animation': 'ani 2s ease-in-out infinite alternate'
+          'margin': -width / 2 + 'em'
         }
       }
     }
@@ -109,12 +97,14 @@
     color: #42b983;
   }
 
-
-
-  #rangeSlider {
+  .boo {
+    width: 0.2em;
+    height: 0.2em;
     position: fixed;
-    left: 0;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: ani 2s ease-in-out infinite alternate;
   }
 
 </style>
