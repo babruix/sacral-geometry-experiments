@@ -9,12 +9,10 @@
 </template>
 
 <script>
-  import ComponentAnim from './components/ComponentAnimation'
-
   export default {
     name: 'app',
     mounted: function () {
-      ComponentAnim();
+
     }
   }
 </script>
