@@ -14,18 +14,9 @@
     name: 'Canvas2',
     data () {
       return {
-        currentFrame: 0,
-        countDivs: 72
+        countDivs:72
       }
     },
-    methods: {
-      drawFrame: function (timestamp) {
-        window.requestAnimationFrame(this.drawFrame);
-      },
-    },
-    mounted: function () {
-//      window.requestAnimationFrame(this.drawFrame);
-    }
   }
 </script>
 
@@ -50,8 +41,14 @@
   }
 
   @keyframes roundandround {
-    to {
-      transform: rotateY(360deg);
+    @for $i from 0 through 10 {
+      $percent: 0% + $i*10;
+      $zRotate: -1deg;
+      @if $i == 0 {$zRotate: 0deg;}
+      @if $i % 2 == 0 {$zRotate: 1deg;}
+      @if $i == 10 {$zRotate: 0deg;}
+      #{$percent} { transform: rotateY($i*36deg) rotateZ($zRotate);}
+      /*#{$percent} { transform: rotateY($i*36deg)}*/
     }
   }
 
@@ -60,18 +57,19 @@
   }
 
   .scene {
-    width: 600px;
+    width: 70%;
     height: 600px;
     margin: 0 auto;
-    perspective: 300px;
+    perspective: 15em;
+    transform: translate(0%, 0%);
+    overflow: hidden;
   }
 
   .wrapper {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    /*transform: rotateX(-10deg) translateX(-5em) translateY(1em) translateZ(1em);*/
-    transform: translateZ(5em);
+    transform: translateZ(3em)  translateY(-2em) translateX(25%);
   }
 
   .tunnel {
@@ -80,26 +78,37 @@
     height: 200px;
     margin: 0 auto;
     transform-style: preserve-3d;
-    animation: roundandround 20s infinite linear;
+    animation: roundandround 10s infinite linear;
+    will-change: transform;
   }
 
   .tunnel .ring {
     position: absolute;
-    top: 200px;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 16px solid;
+    border: 1px solid;
     border-radius: 50%;
-    transform-origin: 50% 50%;
-    transform: translateX(-2em);
+    transform-origin: 27% 50%;
+    transform: translateX(-5em);
     will-change: color, transform;
   }
 
   @for $i from 1 through 72 {
+    $clr: ($i) *5deg;
+
     .ring:nth-child(#{$i}) {
-      color: hsl($i *5deg, 100, 50);
-      transform: rotateY($i *5deg) translateX(10em);
+
+      color: hsl($clr, 100, 50);
+      transform: rotateY($clr) translateX(10em);
+
+      $boxShad: 1px 1px hsl($clr , 100, 50);
+      @for $j from 0 through 72 {
+        $clr2: ($i+$j) *5deg;
+        $boxShad: $boxShad, -#{$j/10}px #{$j/10}px #{$j}px hsl($clr2 , 100, 50);
+      }
+      box-shadow:  $boxShad;
     }
   }
 
