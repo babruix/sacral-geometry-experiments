@@ -1,22 +1,37 @@
 <template>
-  <div class="scene">
+  <div>
+    <button @click="enterFullscreen('tunnel-scene')">GO FULL SCREEN</button>
+
+    <div class="scene" id="tunnel-scene">
     <div class="wrapper">
       <ul class="tunnel">
         <li v-for="n in countDivs" class="ring"></li>
       </ul>
     </div>
   </div>
-
+  </div>
 </template>
 
 <script>
+  document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen ||      document.mozCancelFullScreen;
+
   export default {
-    name: 'Canvas2',
+    name: 'Tunnel',
     data () {
       return {
-        countDivs:72
+        countDivs: 72
       }
     },
+    methods: {
+      enterFullscreen: function (id) {
+        var el = document.getElementById(id);
+        if (el.webkitRequestFullScreen) {
+          el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else {
+          el.mozRequestFullScreen();
+        }
+      }
+    }
   }
 </script>
 
@@ -63,13 +78,19 @@
     perspective: 15em;
     transform: translate(0%, 0%);
     overflow: hidden;
+    background-color: black;
   }
+  #tunnel-scene:-webkit-full-screen {  overflow: visible; }
+  #tunnel-scene:-moz-full-screen {  overflow: visible; }
+  #tunnel-scene:-ms-full-screen {  overflow: visible; }
+  #tunnel-scene:-o-full-screen {  overflow: visible; }
+  #tunnel-scene:full-screen {  overflow: visible; }
 
   .wrapper {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transform: translateZ(3em)  translateY(-2em) translateX(25%);
+    transform: translateZ(3em)  translateY(-2em) translateX(10%);
   }
 
   .tunnel {
