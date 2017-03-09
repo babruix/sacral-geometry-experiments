@@ -1,7 +1,5 @@
 <template>
   <div>
-    <button @click="enterFullscreen('tunnel-scene')">GO FULL SCREEN</button>
-
     <div class="scene" id="tunnel-scene">
     <div class="wrapper">
       <ul class="tunnel">
@@ -13,7 +11,6 @@
 </template>
 
 <script>
-  document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen ||      document.mozCancelFullScreen;
 
   export default {
     name: 'Tunnel',
@@ -23,14 +20,7 @@
       }
     },
     methods: {
-      enterFullscreen: function (id) {
-        var el = document.getElementById(id);
-        if (el.webkitRequestFullScreen) {
-          el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-        } else {
-          el.mozRequestFullScreen();
-        }
-      }
+
     }
   }
 </script>
@@ -57,13 +47,14 @@
 
   @keyframes roundandround {
     @for $i from 0 through 10 {
-      $percent: 0% + $i*10;
+      $percent: 0% + $i * 10;
       $zRotate: -1deg;
       @if $i == 0 {$zRotate: 0deg;}
       @if $i % 2 == 0 {$zRotate: 1deg;}
       @if $i == 10 {$zRotate: 0deg;}
-      #{$percent} { transform: rotateY($i*36deg) rotateZ($zRotate);}
-      /*#{$percent} { transform: rotateY($i*36deg)}*/
+      #{$percent} {
+        transform: rotateY($i * 36deg) rotateZ($zRotate);
+      }
     }
   }
 
@@ -80,11 +71,36 @@
     overflow: hidden;
     background-color: black;
   }
-  #tunnel-scene:-webkit-full-screen {  overflow: visible; }
-  #tunnel-scene:-moz-full-screen {  overflow: visible; }
-  #tunnel-scene:-ms-full-screen {  overflow: visible; }
-  #tunnel-scene:-o-full-screen {  overflow: visible; }
-  #tunnel-scene:full-screen {  overflow: visible; }
+
+  :-webkit-full-screen {
+    .scene {
+      overflow: visible;
+    }
+  }
+
+  :-moz-full-screen {
+    .scene {
+      overflow: visible;
+    }
+  }
+
+  :-ms-full-screen {
+    .scene {
+      overflow: visible;
+    }
+  }
+
+  :-o-full-screen {
+    .scene {
+      overflow: visible;
+    }
+  }
+
+  :full-screen {
+    .scene {
+      overflow: visible;
+    }
+  }
 
   .wrapper {
     width: 100%;
