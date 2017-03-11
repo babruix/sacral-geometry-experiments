@@ -10,13 +10,12 @@
 </template>
 
 <script>
-  document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen;
 
   export default {
     name: 'app',
     methods: {
       enterFullscreen: function () {
-        var el = document.getElementById('fullscreen').nextSibling.nextSibling;
+        const el = document.getElementById('fullscreen').nextSibling.nextSibling;
         if (el.webkitRequestFullScreen) {
           el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
         } else {

@@ -16,7 +16,7 @@
     name: 'Tunnel',
     data () {
       return {
-        countDivs: 72
+        countDivs: 72,
       }
     },
     methods: {
