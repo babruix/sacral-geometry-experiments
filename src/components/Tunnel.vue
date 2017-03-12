@@ -11,38 +11,33 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import { Component } from 'vue-property-decorator'
 
-  export default {
-    name: 'Tunnel',
-    data () {
-      return {
-        countDivs: 72,
-      }
-    },
-    methods: {
-
-    }
+  @Component
+  export default class Tunnel extends Vue {
+    countDivs = 72
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  h1, h2 {
-    font-weight: normal;
-  }
+<style scoped lang="scss" rel="stylesheet/scss">
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+  @for $i from 1 through 72 {
+    $clr: ($i) *5deg;
 
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
+    .ring:nth-child(#{$i}) {
 
-  a {
-    color: #42b983;
+      color: hsl($clr, 100, 50);
+      transform: rotateY($clr) translateX(10em);
+
+      $boxShad: 1px 1px hsl($clr , 100, 50);
+      @for $j from 0 through 72 {
+        $clr2: ($i+$j) *5deg;
+        $boxShad: $boxShad, -#{$j/10}px #{$j/10}px #{$j}px hsl($clr2 , 100, 50);
+      }
+      box-shadow: $boxShad;
+    }
   }
 
   @keyframes roundandround {
@@ -56,10 +51,6 @@
         transform: rotateY($i * 36deg) rotateZ($zRotate);
       }
     }
-  }
-
-  body {
-    background-color: #000000;
   }
 
   .scene {
@@ -131,23 +122,5 @@
     transform: translateX(-5em);
     will-change: color, transform;
   }
-
-  @for $i from 1 through 72 {
-    $clr: ($i) *5deg;
-
-    .ring:nth-child(#{$i}) {
-
-      color: hsl($clr, 100, 50);
-      transform: rotateY($clr) translateX(10em);
-
-      $boxShad: 1px 1px hsl($clr , 100, 50);
-      @for $j from 0 through 72 {
-        $clr2: ($i+$j) *5deg;
-        $boxShad: $boxShad, -#{$j/10}px #{$j/10}px #{$j}px hsl($clr2 , 100, 50);
-      }
-      box-shadow:  $boxShad;
-    }
-  }
-
 
 </style>

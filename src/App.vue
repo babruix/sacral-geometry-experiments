@@ -10,17 +10,17 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
 
-  export default {
-    name: 'app',
-    methods: {
-      enterFullscreen: function () {
-        const el = document.getElementById('fullscreen').nextSibling.nextSibling;
-        if (el.webkitRequestFullScreen) {
-          el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-        } else {
-          el.mozRequestFullScreen();
-        }
+  @Component({})
+  export default class App extends Vue {
+    enterFullscreen () {
+      const el = document.getElementById('fullscreen').nextSibling.nextSibling;
+      if (el.webkitRequestFullScreen) {
+        el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+      } else {
+        el.mozRequestFullScreen();
       }
     }
   }

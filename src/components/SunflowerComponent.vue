@@ -12,57 +12,39 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import { Component, Watch } from 'vue-property-decorator'
   import Sunflower from './Sunflower'
-  import ComponentAnim from './ComponentAnimation'
 
-  export default {
-    name: 'Canvas3',
-    data () {
-      return {
-        seeds: 2000,
-        rotateOn: false,
-        radius: 2,
-      }
-    },
-    methods: {
-      setRadiusExpression: function (number) {
-        this.radius = number || 'Math.cos(theta) * Math.sin(theta) * this.PHI * 25';
-      }
-    },
-    watch: {
-      seeds() {
-        this.sunflower.seeds = this.seeds;
-      },
-      rotateOn() {
-        this.sunflower.rotateOn = this.rotateOn;
-      },
-      radius() {
-        this.sunflower.radius = this.radius;
-      }
-    },
-    mounted: function () {
+  @Component
+  export default class SunflowerComponent extends Vue {
+
+    seeds = 2000
+    rotateOn = false
+    radius = 2
+
+    setRadiusExpression (number) {
+      this.radius = number || 'Math.cos(theta) * Math.sin(theta) * this.PHI * 25';
+    }
+
+    mounted () {
       this.sunflower = new Sunflower('canvas');
       this.sunflower.animate();
-      ComponentAnim();
+    }
+
+    @Watch('seeds')
+    onSeedsChanged() {
+      this.sunflower.seeds = this.seeds
+    }
+
+    @Watch('rotateOn')
+    onRotateChanged() {
+      this.sunflower.rotateOn = this.rotateOn
+    }
+
+    @Watch('radius')
+    onRadiusChanged() {
+      this.sunflower.radius = this.radius
     }
   }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-
-</style>

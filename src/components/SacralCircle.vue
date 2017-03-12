@@ -6,58 +6,55 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import { Component } from 'vue-property-decorator'
 
-  export default {
-    name: 'hello',
-    data () {
-      return {
-        currentFrame: 0
-      }
-    },
-    methods: {
-      drawFrame: function () {
-        this.currentFrame++;
-        window.requestAnimationFrame(this.drawFrame);
-      }
-    },
-    mounted: function () {
+  @Component
+  export default class SacralCircle extends Vue {
+    currentFrame = 0
+
+    drawFrame () {
+      this.currentFrame++;
       window.requestAnimationFrame(this.drawFrame);
-    },
-    computed: {
+    }
 
-      booStyle() {
+    mounted () {
+      window.requestAnimationFrame(this.drawFrame);
+    }
+
+    get booStyle() {
         let width = 30
           , height = 30
           , boxShadowInitial = ''
-          , nbr_circles = 150
+          , nbrCircles = 150
           , deviation = 5 / 8.0
           , phi = (Math.sqrt(5) + 1) / 2 + 3
-          , golden_angle = phi * (33 + Math.PI)
-          , lg_rad = width * .45
-          , lg_area = Math.pow(lg_rad, 2) * Math.PI
-          , mean_area = lg_area / nbr_circles
-          , min_area = mean_area * (1 - deviation)
-          , max_area = mean_area * (1 + deviation)
-          , cum_area = 0
+          , goldenAngle = phi * (33 + Math.PI)
+          , lgRad = width * .45
+          , lgArea = Math.pow(lgRad, 2) * Math.PI
+          , meanArea = lgArea / nbrCircles
+          , minArea = meanArea * (1 - deviation)
+          , maxArea = meanArea * (1 + deviation)
+          , cumArea = 0
           , fudge = .87
           , cx = width / 2
           , cy = height / 2
-          , hue_incr = this.currentFrame * .0002 + .1
-          , angle_offset = this.currentFrame * .005
+          , hueIncr = this.currentFrame * .0002 + .1
+          , angleOffset = this.currentFrame * .005
 
-        for (var i = 1; i <= nbr_circles; ++i) {
+        for (var i = 1; i <= nbrCircles; ++i) {
 
-          let angle = i * golden_angle + angle_offset
-            , ratio = i / nbr_circles
-            , sm_area = min_area + ratio * (max_area - min_area)
+          let angle = i * goldenAngle + angleOffset
+            , ratio = i / nbrCircles
+            , sm_area = minArea + ratio * (maxArea - minArea)
             , sm_rad = Math.sqrt(sm_area / Math.PI)
 
-          cum_area += sm_area;
+          cumArea += sm_area;
 
-          let spiral_rad = Math.sqrt(cum_area / Math.PI)
+          let spiral_rad = Math.sqrt(cumArea / Math.PI)
             , x = cx + Math.cos(angle) * spiral_rad
             , y = cy + Math.sin(angle) * spiral_rad
-            , hue = hue_incr * i;
+            , hue = hueIncr * i;
 
           hue -= Math.floor(hue);
           hue *= 360;
@@ -72,31 +69,12 @@
           'box-shadow': boxShadowInitial,
           'margin': -width / 2 + 'em'
         }
-      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
   .boo {
     width: 0.2em;
     height: 0.2em;
