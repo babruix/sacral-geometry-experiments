@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69fc3611-d61c-4471-a8e5-8c6147ba8393" name="Default" comment="Added gui controls to canvas experiment.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.a1e1e10bec37c8d6941f.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.a1e1e10bec37c8d6941f.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.a3a9d5156f925cbbe53c.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.a3a9d5156f925cbbe53c.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.31f020a93a8af89ff4c8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.31f020a93a8af89ff4c8.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Spiral.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.18a5714903591700e75e.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.18a5714903591700e75e.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.a1c0735008b26316805b.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.a1c0735008b26316805b.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.fcaf1197c429c7cd7a43.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.fcaf1197c429c7cd7a43.js.map" afterPath="" />
+    <list default="true" id="69fc3611-d61c-4471-a8e5-8c6147ba8393" name="Default" comment="Refactored menu to be in separated component, added styling.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/css/app.5338e14f3eff7c69ff18425dd51f518a.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/css/app.5338e14f3eff7c69ff18425dd51f518a.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.a668ef56c91b8f565a6f.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.a668ef56c91b8f565a6f.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.812ca6a39881b0cdfe6f.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.812ca6a39881b0cdfe6f.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.3778079f88105b6b7dd8.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.3778079f88105b6b7dd8.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NavMenu.vue" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/css/app.609de0c2f85e65bc0056c24b224021cc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/css/app.609de0c2f85e65bc0056c24b224021cc.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.a1e1e10bec37c8d6941f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.a1e1e10bec37c8d6941f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.a3a9d5156f925cbbe53c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.a3a9d5156f925cbbe53c.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.31f020a93a8af89ff4c8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.31f020a93a8af89ff4c8.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Canvas.vue" afterPath="$PROJECT_DIR$/src/components/Canvas.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Spiral.vue" afterPath="$PROJECT_DIR$/src/components/Spiral.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SunflowerComponent.vue" afterPath="$PROJECT_DIR$/src/components/SunflowerComponent.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,13 +45,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Spiral.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Spiral.vue">
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="113" column="72" lean-forward="false" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+            <state relative-caret-position="1140">
+              <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
               <folding>
-                <element signature="e#120#141#0" expanded="true" />
+                <element signature="e#185#206#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>currentFrame</find>
-      <find>hue_incr</find>
       <find>drawFrame</find>
       <find>overflow: visible;</find>
       <find>fudge</find>
@@ -93,12 +96,10 @@
       <find>canvas</find>
       <find>updateControls</find>
       <find>;</find>
+      <find>#0F1014</find>
+      <find>&lt;li&gt;&lt;router-link</find>
     </findStrings>
     <replaceStrings>
-      <replace>this.circles</replace>
-      <replace>this.goldenAngle</replace>
-      <replace>this.TAU</replace>
-      <replace>this.PHI</replace>
       <replace>stati</replace>
       <replace>static</replace>
       <replace>;</replace>
@@ -125,6 +126,10 @@
       <replace>this.colorspeed</replace>
       <replace>this.ctx</replace>
       <replace>this.canvas</replace>
+      <replace>$black</replace>
+      <replace>$black</replace>
+      <replace>router-link to=</replace>
+      <replace>&lt;router-link tag=&quot;li&quot;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/node_modules/p5</dir>
@@ -142,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="localhost:8080/app.js" />
         <option value="$PROJECT_DIR$/.eslintignore" />
         <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
@@ -159,13 +163,16 @@
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Sunflower.js" />
-        <option value="$PROJECT_DIR$/src/components/SunflowerComponent.vue" />
         <option value="$PROJECT_DIR$/src/components/SacralCircle.vue" />
         <option value="$PROJECT_DIR$/src/components/Tunnel.vue" />
         <option value="$PROJECT_DIR$/src/components/Canvas.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/components/Navmenu.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/Spiral.vue" />
+        <option value="$PROJECT_DIR$/src/components/SunflowerComponent.vue" />
+        <option value="$PROJECT_DIR$/src/components/NavMenu.vue" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
       </list>
     </option>
   </component>
@@ -178,9 +185,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="208" />
+    <option name="x" value="255" />
     <option name="y" value="23" />
-    <option name="width" value="1198" />
+    <option name="width" value="978" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -371,7 +378,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="editor.config.accepted" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/alexeyromanov/Sites/sacralgeom/src/components/Tunnel.vue" />
+    <property name="SearchEverywhereHistoryKey" value="tabs&#9;ACTION&#9;ShowTabsInSingleRow" />
     <property name="js.eslint.nodeInterpreter" value="project" />
     <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
   </component>
@@ -523,7 +530,7 @@
       <workItem from="1489081584674" duration="2132000" />
       <workItem from="1489185600824" duration="2610000" />
       <workItem from="1489327841677" duration="3518000" />
-      <workItem from="1489332775834" duration="22778000" />
+      <workItem from="1489332775834" duration="28413000" />
     </task>
     <task id="LOCAL-00001" summary="Added animation using box shadow">
       <created>1488448934536</created>
@@ -665,11 +672,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489423893308</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added flexible spiral experiment.">
+      <created>1489427438060</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1489427438060</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97896000" />
+    <option name="totallyTimeSpent" value="103531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -681,15 +695,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="208" y="23" width="1198" height="873" extended-state="0" />
+    <frame x="255" y="23" width="978" height="873" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23789296" sideWeight="0.6871795" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.338558" sideWeight="0.6717949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23789296" sideWeight="0.31282052" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.338558" sideWeight="0.32820514" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27509293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30669332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283767" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -753,30 +767,17 @@
     <MESSAGE value="Implemented GUI controls using dat.gui" />
     <MESSAGE value=" Remove dat.gui controls from previous route." />
     <MESSAGE value="Added gui controls to canvas experiment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gui controls to canvas experiment." />
+    <MESSAGE value="Added flexible spiral experiment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added flexible spiral experiment." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/p5/lib/p5.min.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/p5/lib/addons/p5.dom.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/p5/package.json" />
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://localhost:8080/app.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -1809,106 +1810,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SunflowerComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <marker date="1489412878000" expanded="true" signature="9:112" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="32:100" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="122:1019" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="133:273" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="342:1010" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="441:721" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="764:811" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="858:911" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="956:1005" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ComponentAnimation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tunnel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="e#311#332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SacralCircle.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="46" />
-          <folding>
-            <marker date="1489412878000" expanded="true" signature="9:104" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="31:92" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="114:2123" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="125:220" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="283:2114" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="428:512" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="529:845" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="866:2110" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="1368:2040" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="1886:1933" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="2055:2104" ph="{&quot;box-shadow&quot;: boxShadowInitial...}" />
-            <marker date="1489412878000" expanded="true" signature="2241:2639" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="2251:2457" ph="{...}" />
-            <marker date="1489412878000" expanded="true" signature="2476:2631" ph="..." />
-            <marker date="1489412878000" expanded="true" signature="2481:2627" ph="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <marker date="1489426250000" expanded="true" signature="7:285" ph="..." />
-            <marker date="1489426250000" expanded="true" signature="330:774" ph="{...}" />
-            <marker date="1489426250000" expanded="true" signature="342:772" ph="[...]" />
-            <marker date="1489426250000" expanded="true" signature="348:430" ph="{&quot;name&quot;: 'SacralCircle'...}" />
-            <marker date="1489426250000" expanded="true" signature="436:512" ph="{&quot;name&quot;: 'Spiral'...}" />
-            <marker date="1489426250000" expanded="true" signature="518:594" ph="{&quot;name&quot;: 'Canvas'...}" />
-            <marker date="1489426250000" expanded="true" signature="600:676" ph="{&quot;name&quot;: 'Tunnel'...}" />
-            <marker date="1489426250000" expanded="true" signature="682:767" ph="{&quot;name&quot;: 'Sunflower'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <marker date="1489426275000" expanded="true" signature="9:347" ph="..." />
-            <marker date="1489426275000" expanded="true" signature="26:335" ph="..." />
-            <marker date="1489426275000" expanded="true" signature="357:961" ph="..." />
-            <marker date="1489426275000" expanded="true" signature="368:442" ph="..." />
-            <marker date="1489426275000" expanded="true" signature="496:952" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="522:746" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="798:948" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="970:1612" ph="..." />
-            <marker date="1489426275000" expanded="true" signature="979:1186" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1192:1215" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1224:1289" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1300:1330" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1354:1388" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1410:1444" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1465:1499" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1519:1553" ph="{...}" />
-            <marker date="1489426275000" expanded="true" signature="1570:1604" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1936,12 +1842,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tunnel.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="47" />
+          <folding>
+            <element signature="e#311#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SacralCircle.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <marker date="1489412878000" expanded="true" signature="9:104" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="31:92" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="114:2123" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="125:220" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="283:2114" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="428:512" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="529:845" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="866:2110" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="1368:2040" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="1886:1933" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="2055:2104" ph="{&quot;box-shadow&quot;: boxShadowInitial...}" />
+            <marker date="1489412878000" expanded="true" signature="2241:2639" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="2251:2457" ph="{...}" />
+            <marker date="1489412878000" expanded="true" signature="2476:2631" ph="..." />
+            <marker date="1489412878000" expanded="true" signature="2481:2627" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <marker date="1489441361000" expanded="true" signature="7:285" ph="..." />
+            <marker date="1489441361000" expanded="true" signature="330:786" ph="{...}" />
+            <marker date="1489441361000" expanded="true" signature="342:784" ph="[...]" />
+            <marker date="1489441361000" expanded="true" signature="348:442" ph="{&quot;name&quot;: 'SacralCircle'...}" />
+            <marker date="1489441361000" expanded="true" signature="448:524" ph="{&quot;name&quot;: 'Spiral'...}" />
+            <marker date="1489441361000" expanded="true" signature="530:606" ph="{&quot;name&quot;: 'Canvas'...}" />
+            <marker date="1489441361000" expanded="true" signature="612:688" ph="{&quot;name&quot;: 'Tunnel'...}" />
+            <marker date="1489441361000" expanded="true" signature="694:779" ph="{&quot;name&quot;: 'Sunflower'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1489442584000" expanded="false" signature="0:139" ph="//..." />
+            <marker date="1489442584000" expanded="true" signature="147:215" ph="..." />
+            <marker date="1489442584000" expanded="true" signature="251:278" ph="/*...*/" />
+            <marker date="1489442584000" expanded="true" signature="287:358" ph="{&quot;el&quot;: '##app'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Spiral.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="113" column="72" lean-forward="false" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+        <state relative-caret-position="285">
+          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
           <folding>
-            <element signature="e#120#141#0" expanded="true" />
+            <marker date="1489443967000" expanded="true" signature="9:106" ph="..." />
+            <marker date="1489443967000" expanded="true" signature="31:94" ph="..." />
+            <marker date="1489443967000" expanded="true" signature="116:3261" ph="..." />
+            <marker date="1489443967000" expanded="true" signature="127:222" ph="..." />
+            <marker date="1489443967000" expanded="true" signature="279:3252" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="497:906" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="927:3248" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="1238:2513" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="1494:2505" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="1772:1803" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="2066:2116" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="2357:2402" ph="{...}" />
+            <marker date="1489443967000" expanded="true" signature="2521:2586" ph="//..." />
+            <marker date="1489443967000" expanded="true" signature="2886:3242" ph="{&quot;box-shadow&quot;: boxShadowInitial...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SunflowerComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#126#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="37" />
+          <folding>
+            <marker date="1489444317000" expanded="true" signature="9:413" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="35:401" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="53:392" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="423:574" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="434:501" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="559:565" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="618:2255" ph="..." />
+            <marker date="1489444317000" expanded="true" signature="682:1978" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="982:1974" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="1162:1968" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="1600:1960" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="2025:2161" ph="{...}" />
+            <marker date="1489444317000" expanded="true" signature="2204:2247" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+          <folding>
+            <element signature="e#185#206#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,7 @@
   export default class Spiral extends Vue {
     datgui = new dat.GUI()
 
-    dotsCount = 26
+    dotsCount = 20
     colorsCount = 7
     colorsRepeat = 3
     cutOff = .25
@@ -33,7 +33,6 @@
       this.datgui.add(this, 'cutOff', 0.1, 1, 0.1)
       this.datgui.add(this, 'diam', 0.1, 1, 0.1)
       this.datgui.add(this, 'scaleFactor', 1, 50)
-      this.datgui.add(this, 'multiply', 2, 10)
       this.datgui.add(this, 'cutOffShift', 1, 10)
     }
 
