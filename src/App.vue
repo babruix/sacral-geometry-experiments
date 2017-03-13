@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <a href="#/">Fibonacci Spiral</a>
+    <a href="#/spiral">Flexible Spiral</a>
     <a href="#/canvas">Canvas</a>
     <a href="#/tunnel">Tunnel</a>
     <a href="#/sunflower">Sunflower</a>

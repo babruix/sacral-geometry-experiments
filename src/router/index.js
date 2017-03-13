@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Spiral from '@/components/Spiral'
 import SacralCircle from '@/components/SacralCircle'
 import Canvas from '@/components/Canvas'
 import Tunnel from '@/components/Tunnel'
-import Sunflower  from '@/components/SunflowerComponent'
+import Sunflower from '@/components/SunflowerComponent'
 
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'SacralCircle',
       component: SacralCircle
+    },
+    {
+      path: '/spiral',
+      name: 'Spiral',
+      component: Spiral
     },
     {
       path: '/canvas',

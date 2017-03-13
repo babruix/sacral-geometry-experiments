@@ -14,7 +14,7 @@
     datgui = new dat.GUI()
 
     length = 200
-    divisions = 6
+    divisions = 50
     speed = 120 * 1000
     colorSpeed = 60
 
@@ -101,7 +101,7 @@
 
       // @params: object, property, min, max, step
       this.datgui.add(this, 'length', 200, 500, 10)
-      this.datgui.add(this, 'divisions', 0, 10)
+      this.datgui.add(this, 'divisions', 10, 50)
       this.datgui.add(this, 'speed', 120, 112000, 100)
       this.datgui.add(this, 'colorSpeed', 5, 100, 1)
     }
