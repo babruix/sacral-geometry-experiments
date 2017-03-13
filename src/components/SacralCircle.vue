@@ -7,9 +7,12 @@
 <script>
   import Vue from 'vue'
   import { Component } from 'vue-property-decorator'
+  import dat from 'dat-gui'
 
   @Component
   export default class SacralCircle extends Vue {
+    datgui = new dat.GUI()
+
     currentFrame = 0
     fudge = .87
     nbrCircles = 150
@@ -24,10 +27,11 @@
     mounted () {
       window.requestAnimationFrame(this.drawFrame)
 
-      window.datgui.add(this, 'nbrCircles', 100, 1000, 100)
-      window.datgui.add(this, 'fudge', 0, 1, 0.1)
-      window.datgui.add(this, 'deviation', -1, 1, 0.1)
-      window.datgui.add(this, 'lgRad', 5, 30, 1)
+      // @params: object, property, min, max, step
+      this.datgui.add(this, 'nbrCircles', 100, 1000, 100)
+      this.datgui.add(this, 'fudge', 0, 1, 0.1)
+      this.datgui.add(this, 'deviation', -1, 1, 0.1)
+      this.datgui.add(this, 'lgRad', 5, 30, 1)
     }
 
     get booStyle() {

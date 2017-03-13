@@ -12,26 +12,23 @@
 <script>
   import Vue from 'vue'
   import { Component, Watch } from 'vue-property-decorator'
-  import dat from 'dat-gui'
-
-  window.datgui = new dat.GUI()
 
   @Component
   export default class App extends Vue {
+
     enterFullscreen () {
       const el = document.getElementById('fullscreen').nextSibling.nextSibling;
-      if (el.webkitRequestFullScreen) {
-        el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-      } else {
-        el.mozRequestFullScreen();
-      }
+      el.webkitRequestFullScreen
+        ? el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT)
+        : el.mozRequestFullScreen();
     }
 
     @Watch('$route')
     onRouteChanged(to, from) {
-      // @todo: remove this ugly hack :)
-      // to prevent datgui growing
-      location.reload();
+
+      // Remove dat.gui element from previous route.
+      let element = document.querySelector('.main.a');
+      element && element.remove()
     }
   }
 </script>

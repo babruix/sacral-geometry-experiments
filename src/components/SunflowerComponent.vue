@@ -8,9 +8,11 @@
   import Vue from 'vue'
   import { Component, Watch } from 'vue-property-decorator'
   import Sunflower from './Sunflower'
+  import dat from 'dat-gui'
 
   @Component
   export default class SunflowerComponent extends Vue {
+    datgui = new dat.GUI()
 
     seeds = 2000
     rotateOn = false
@@ -20,10 +22,11 @@
       this.sunflower = new Sunflower('canvas');
       this.sunflower.animate();
 
+
       // @params: object, property, min, max, step
-      window.datgui.add(this, 'seeds', 70, 3000, 10)
-      window.datgui.add(this, 'rotateOn')
-      window.datgui.add(this, 'radius', 1, 100, 1)
+      this.datgui.add(this, 'seeds', 70, 3000, 10)
+      this.datgui.add(this, 'rotateOn')
+      this.datgui.add(this, 'radius', 2, 100, 1)
     }
 
     @Watch('seeds')

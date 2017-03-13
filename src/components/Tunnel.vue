@@ -13,9 +13,12 @@
 <script>
   import Vue from 'vue'
   import { Component } from 'vue-property-decorator'
+  import dat from 'dat-gui'
 
   @Component
   export default class Tunnel extends Vue {
+    datgui = new dat.GUI()
+
     countDivs = 72
     transformOrigin = 25
     perspective = 20
@@ -25,11 +28,11 @@
 
     mounted() {
       // @params: object, property, min, max, step
-      window.datgui.add(this, 'transformOrigin', 20, 50)
-      window.datgui.add(this, 'perspective', 15, 50)
-      window.datgui.add(this, 'wrapperTransformZ', -40, 20).name('Z translate')
-      window.datgui.add(this, 'wrapperTransformY', -20, 20).name('Y translate')
-      window.datgui.add(this, 'wrapperTransformX', -100, 100).name('X translate')
+      this.datgui.add(this, 'transformOrigin', 20, 50)
+      this.datgui.add(this, 'perspective', 15, 50)
+      this.datgui.add(this, 'wrapperTransformZ', -40, 20).name('Z translate')
+      this.datgui.add(this, 'wrapperTransformY', -20, 20).name('Y translate')
+      this.datgui.add(this, 'wrapperTransformX', -100, 100).name('X translate')
     }
 
     get ringStyle() {
