@@ -1,3 +1,4 @@
+
 export default class Sunflower {
   constructor (id) {
     let canvas = document.getElementById(id)

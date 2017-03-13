@@ -1,13 +1,6 @@
 <template>
   <div class="canvas">
     <canvas id="canvas" width="600" height="600"></canvas>
-    <div>
-      Size: <input id="slider" min="70" type="range" max="2000" value="2000" v-model="seeds"/>
-      Rotate: <input type="checkbox" v-model="rotateOn" width="200px">
-      Radius: <input type="text" v-model="radius"/>
-      you can use <a href="#/canvas3" @click.prevent="setRadiusExpression()">expressions</a>
-      or  <a href="#/canvas3" @click.prevent="setRadiusExpression(3)">number</a>
-    </div>
   </div>
 </template>
 
@@ -23,13 +16,14 @@
     rotateOn = false
     radius = 2
 
-    setRadiusExpression (number) {
-      this.radius = number || 'Math.cos(theta) * Math.sin(theta) * this.PHI * 25';
-    }
-
     mounted () {
       this.sunflower = new Sunflower('canvas');
       this.sunflower.animate();
+
+      // @params: object, property, min, max, step
+      window.datgui.add(this, 'seeds', 70, 3000, 10)
+      window.datgui.add(this, 'rotateOn')
+      window.datgui.add(this, 'radius', 1, 100, 1)
     }
 
     @Watch('seeds')
@@ -46,5 +40,6 @@
     onRadiusChanged() {
       this.sunflower.radius = this.radius
     }
+
   }
 </script>

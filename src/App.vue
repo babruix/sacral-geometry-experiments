@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <a href="#/">Box shadow 1</a>
-    <a href="#/canvas">Canvas 1</a>
+    <a href="#/">Fibonacci Spiral</a>
+    <a href="#/canvas">Canvas</a>
     <a href="#/tunnel">Tunnel</a>
     <a href="#/sunflower">Sunflower</a>
     <button id="fullscreen" @click="enterFullscreen()">GO FULL SCREEN</button>
@@ -11,9 +11,12 @@
 
 <script>
   import Vue from 'vue'
-  import Component from 'vue-class-component'
+  import { Component, Watch } from 'vue-property-decorator'
+  import dat from 'dat-gui'
 
-  @Component({})
+  window.datgui = new dat.GUI()
+
+  @Component
   export default class App extends Vue {
     enterFullscreen () {
       const el = document.getElementById('fullscreen').nextSibling.nextSibling;
@@ -22,6 +25,13 @@
       } else {
         el.mozRequestFullScreen();
       }
+    }
+
+    @Watch('$route')
+    onRouteChanged(to, from) {
+      // @todo: remove this ugly hack :)
+      // to prevent datgui growing
+      location.reload();
     }
   }
 </script>

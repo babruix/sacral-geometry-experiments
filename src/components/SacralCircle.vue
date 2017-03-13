@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    Frame: {{ currentFrame }}
+  <div class="scene">
     <div class="boo" v-bind:style="booStyle"></div>
   </div>
 </template>
@@ -12,72 +11,73 @@
   @Component
   export default class SacralCircle extends Vue {
     currentFrame = 0
+    fudge = .87
+    nbrCircles = 150
+    deviation = 5 / 8.0
+    lgRad = 13
 
     drawFrame () {
-      this.currentFrame++;
-      window.requestAnimationFrame(this.drawFrame);
+      this.currentFrame++
+      window.requestAnimationFrame(this.drawFrame)
     }
 
     mounted () {
-      window.requestAnimationFrame(this.drawFrame);
+      window.requestAnimationFrame(this.drawFrame)
+
+      window.datgui.add(this, 'nbrCircles', 100, 1000, 100)
+      window.datgui.add(this, 'fudge', 0, 1, 0.1)
+      window.datgui.add(this, 'deviation', -1, 1, 0.1)
+      window.datgui.add(this, 'lgRad', 5, 30, 1)
     }
 
     get booStyle() {
-        let width = 30
-          , height = 30
-          , boxShadowInitial = ''
-          , nbrCircles = 150
-          , deviation = 5 / 8.0
-          , phi = (Math.sqrt(5) + 1) / 2 + 3
-          , goldenAngle = phi * (33 + Math.PI)
-          , lgRad = width * .45
-          , lgArea = Math.pow(lgRad, 2) * Math.PI
-          , meanArea = lgArea / nbrCircles
-          , minArea = meanArea * (1 - deviation)
-          , maxArea = meanArea * (1 + deviation)
-          , cumArea = 0
-          , fudge = .87
-          , cx = width / 2
-          , cy = height / 2
-          , hueIncr = this.currentFrame * .0002 + .1
-          , angleOffset = this.currentFrame * .005
+      let boxShadowInitial = ''
+        , phi = (Math.sqrt(5) + 1) / 2 + 3
+        , goldenAngle = phi * (33 + Math.PI)
+        , lgArea = Math.pow(this.lgRad, 2) * Math.PI
+        , meanArea = lgArea / this.nbrCircles
+        , minArea = meanArea * (1 - this.deviation)
+        , maxArea = meanArea * (1 + this.deviation)
+        , cumArea = 0
+        , hueIncrement = this.currentFrame * .0002 + .1
+        , angleOffset = this.currentFrame * .005
 
-        for (var i = 1; i <= nbrCircles; ++i) {
+      for (let i = 1; i <= this.nbrCircles; ++i) {
 
-          let angle = i * goldenAngle + angleOffset
-            , ratio = i / nbrCircles
-            , sm_area = minArea + ratio * (maxArea - minArea)
-            , sm_rad = Math.sqrt(sm_area / Math.PI)
+        let angle = i * goldenAngle + angleOffset
+          , ratio = i / this.nbrCircles
+          , smallArea = minArea + ratio * (maxArea - minArea)
+          , smallRadius = Math.sqrt(smallArea / Math.PI)
 
-          cumArea += sm_area;
+        cumArea += smallArea
 
-          let spiral_rad = Math.sqrt(cumArea / Math.PI)
-            , x = cx + Math.cos(angle) * spiral_rad
-            , y = cy + Math.sin(angle) * spiral_rad
-            , hue = hueIncr * i;
+        let spiral_rad = Math.sqrt(cumArea / Math.PI)
+          , x = Math.cos(angle) * spiral_rad
+          , y = Math.sin(angle) * spiral_rad
+          , hue = hueIncrement * i;
 
-          hue -= Math.floor(hue);
-          hue *= 360;
+        hue -= Math.floor(hue);
+        hue *= 360;
 
-          if (boxShadowInitial.length > 0) {
-            boxShadowInitial += ', ';
-          }
-          boxShadowInitial += `${x}em ${y}em 0 ${sm_rad * fudge}em hsl(${hue}, 100%, 50%)`
+        if (boxShadowInitial.length > 0) {
+          boxShadowInitial += ', ';
         }
+        boxShadowInitial += `${x}em ${y}em 0 ${smallRadius * this.fudge}em hsl(${hue}, 100%, 50%)`
+      }
 
-        return {
-          'box-shadow': boxShadowInitial,
-          'margin': -width / 2 + 'em'
-        }
+      return {
+        'box-shadow': boxShadowInitial,
+      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss" rel="stylesheet/scss">
+
   .boo {
-    width: 0.2em;
-    height: 0.2em;
+    width: 1px;
+    height: 1px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -87,7 +87,14 @@
   }
 
   @keyframes ani {
-    0%   { transform: scaleX(1.1); }
-    100% { transform: scaleX(-0.3); }
+   /* 0% {
+      transform: translateZ(0);
+    }
+    50% {
+      transform: translateZ(3em);
+    }
+    100% {
+      transform: translateZ(0);
+    }*/
   }
 </style>
