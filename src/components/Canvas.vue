@@ -7,38 +7,43 @@
 <script>
   import Vue from 'vue'
   import { Component } from 'vue-property-decorator'
-
-  let canvas, ctx, colorspeed, target, speed, width, height, diameter, radius, center, length, divisions, rainbow, rlength;
+  import dat from 'dat-gui'
 
   @Component
-  export default class Canvas1 extends Vue {
+  export default class Canvas extends Vue {
+    datgui = new dat.GUI()
+
+    length = 200
+    divisions = 6
+    speed = 120 * 1000
+    colorSpeed = 60
 
     drawFrame (timestamp) {
       const prev = {};
-      const r = Math.floor(timestamp / colorspeed);
-      if (timestamp - target.timestamp > speed) {
-        target.timestamp = 0;
-        const temp = target.origin;
-        target.origin = target.destination;
-        target.destination = temp;
+      const r = Math.floor(timestamp / this.colorSpeed);
+      if (timestamp - this.target.timestamp > this.speed) {
+        this.target.timestamp = 0;
+        const temp = this.target.origin;
+        this.target.origin = this.target.destination;
+        this.target.destination = temp;
       }
-      if (target.timestamp === 0) {
-        target.timestamp = timestamp;
+      if (this.target.timestamp === 0) {
+        this.target.timestamp = timestamp;
       }
-      const factor = this.easeInOutSine(timestamp - target.timestamp, target.origin, target.destination - target.origin, speed);
-      ctx.fillRect(0, 0, width, height);
-      for (let i = 0; i < length; i++) {
+      const factor = this.easeInOutSine(timestamp - this.target.timestamp, this.target.origin, this.target.destination - this.target.origin, this.speed);
+      this.ctx.fillRect(0, 0, this.width, this.height);
+      for (let i = 0; i < this.length; i++) {
         const point = {};
-        point.r = this.linearEase(i, 1, radius - 1, length);
-        point.t = (360 / divisions * i + factor * i) * Math.PI / 180;
-        point.x = point.r * Math.cos(point.t) + center.x;
-        point.y = point.r * Math.sin(point.t) + center.y;
-        ctx.beginPath();
-        const c = rainbow[(r + i) % rlength];
-        ctx.strokeStyle = "rgba(" + c.r + ", " + c.g + ", " + c.b + ", 0.5)";
-        ctx.moveTo(prev.x, prev.y);
-        ctx.lineTo(point.x, point.y);
-        ctx.stroke();
+        point.r = this.linearEase(i, 1, this.radius - 1, this.length);
+        point.t = (360 / this.divisions * i + factor * i) * Math.PI / 180;
+        point.x = point.r * Math.cos(point.t) + this.center.x;
+        point.y = point.r * Math.sin(point.t) + this.center.y;
+        this.ctx.beginPath();
+        const c = this.rainbow[(r + i) % this.rLength];
+        this.ctx.strokeStyle = "rgba(" + c.r + ", " + c.g + ", " + c.b + ", 0.5)";
+        this.ctx.moveTo(prev.x, prev.y);
+        this.ctx.lineTo(point.x, point.y);
+        this.ctx.stroke();
         prev.x = point.x;
         prev.y = point.y;
       }
@@ -73,31 +78,32 @@
     }
 
     mounted () {
-      canvas = document.getElementById('canvas');
-      ctx = canvas.getContext("2d");
-      ctx.fillStyle = "#000";
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
-      ctx.lineWidth = 2;
+      this.canvas = document.getElementById('canvas');
+      this.ctx = this.canvas.getContext("2d");
+      this.ctx.fillStyle = "#000";
+      this.ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+      this.ctx.lineWidth = 2;
 
-      width = canvas.width;
-      height = canvas.height;
-      diameter = width - (width * 0.1);
-      radius = diameter / 2;
-      center = {x: width / 2, y: height / 2};
-      length = 100;
-      divisions = 6;
-      speed = 120 * 1000;
+      this.width = this.canvas.width;
+      this.height = this.canvas.height;
+      this.diameter = this.width - (this.width * 0.1);
+      this.radius = this.diameter / 2;
+      this.center = {x: this.width / 2, y: this.height / 2};
+      this.rainbow = this.makeColorGradient(this.length);
+      this.rLength = this.rainbow.length;
 
-      colorspeed = 60;
-      rainbow = this.makeColorGradient(length);
-      rlength = rainbow.length;
-
-      target = {
+      this.target = {
         origin: -180,
         destination: 180,
         timestamp: 0
       };
       window.requestAnimationFrame(this.drawFrame);
+
+      // @params: object, property, min, max, step
+      this.datgui.add(this, 'length', 200, 500, 10)
+      this.datgui.add(this, 'divisions', 0, 10)
+      this.datgui.add(this, 'speed', 120, 112000, 100)
+      this.datgui.add(this, 'colorSpeed', 5, 100, 1)
     }
   }
 </script>
