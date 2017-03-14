@@ -26,7 +26,7 @@
   $dark: #0F1014;
 
   .wrapper-1 {
-    margin: 0 auto;
+    margin: 0 auto 7px auto;
     width: 412px;
     background: linear-gradient(#3D4246, #24282B);
     height: 60px;

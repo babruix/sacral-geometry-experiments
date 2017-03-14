@@ -95,7 +95,7 @@
     border-right-color: $dark;
     border-bottom-color: $dark;
     width: 145px;
-    margin: 10px auto;
+    margin: 5px auto;
     box-shadow: 0 2px 1px #17191C inset,
     0px -2px 8px #17191C,
     0px 2px 5px rgba(0, 0, 0, 0.1),
