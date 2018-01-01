@@ -6,6 +6,7 @@
       <router-link tag="li" to="/canvas"><a>3</a></router-link>
       <router-link tag="li" to="/tunnel"><a>4</a></router-link>
       <router-link tag="li" to="/sunflower"><a>5</a></router-link>
+      <router-link tag="li" to="/rainbow"><a>6</a></router-link>
     </ul>
   </div>
 </template>
@@ -27,7 +28,7 @@
 
   .wrapper-1 {
     margin: 0 auto 7px auto;
-    width: 412px;
+    width: 494px;
     background: linear-gradient(#3D4246, #24282B);
     height: 60px;
     border-radius: 4px;
@@ -38,7 +39,7 @@
     padding: 8px 8px 12px 8px;
 
     #nav {
-      width: 410px;
+      width: 492px;
       height: 100%;
       border: 1px solid $dark;
       border-radius: 3px;

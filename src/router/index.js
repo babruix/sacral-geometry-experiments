@@ -5,6 +5,7 @@ import SacralCircle from '@/components/SacralCircle'
 import Canvas from '@/components/Canvas'
 import Tunnel from '@/components/Tunnel'
 import Sunflower from '@/components/SunflowerComponent'
+import Rainbow from '@/components/RainbowComponent'
 
 Vue.use(Router)
 
@@ -35,5 +36,10 @@ export default new Router({
       name: 'Sunflower',
       component: Sunflower
     },
+    {
+      path: '/rainbow',
+      name: 'Rainbow',
+      component: Rainbow
+    }
   ]
 })
