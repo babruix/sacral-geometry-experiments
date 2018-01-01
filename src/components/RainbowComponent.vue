@@ -2,7 +2,7 @@
   <div class="star">
     <div v-for="w in countWaves" class="wave">
       <div v-for="l in countLines" class="line">
-        <div class="dot">{{l}}</div>
+        <div class="dot">{{l.toString(2)}}</div>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
   body {
     * {
       position: absolute;
-      top: 0;
+      top: 120px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -52,8 +52,8 @@
         }
       }
       .line {
-        width: 300px;
-        height: 5px;
+        width: 200px;
+        height: 10px;
         @for $i from 0 through ($dot-quantity - 1) {
           &:nth-child(#{$i + 1}) {
             transform: rotate($i * -360deg / $dot-quantity) translate(100px);
@@ -77,7 +77,7 @@
 
   @keyframes Wave {
     80% {
-      transform: translate(170px) scale(0.25);
+      transform: translate(100px) scale(0.25);
     }
   }
 </style>

@@ -19,9 +19,8 @@
     radius = 2
 
     mounted () {
-      this.sunflower = new Sunflower('canvas');
-      this.sunflower.animate();
-
+      this.sunflower = new Sunflower('canvas')
+      this.sunflower.animate()
 
       // @params: object, property, min, max, step
       this.datgui.add(this, 'seeds', 70, 3000, 10)
@@ -30,17 +29,17 @@
     }
 
     @Watch('seeds')
-    onSeedsChanged() {
+    onSeedsChanged () {
       this.sunflower.seeds = this.seeds
     }
 
     @Watch('rotateOn')
-    onRotateChanged() {
+    onRotateChanged () {
       this.sunflower.rotateOn = this.rotateOn
     }
 
     @Watch('radius')
-    onRadiusChanged() {
+    onRadiusChanged () {
       this.sunflower.radius = this.radius
     }
   }

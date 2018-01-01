@@ -14,7 +14,7 @@
     datgui = new dat.GUI()
 
     currentFrame = 0
-    fudge = .87
+    fudge = 0.87
     nbrCircles = 150
     deviation = 5 / 8.0
     lgRad = 13
@@ -34,7 +34,7 @@
       this.datgui.add(this, 'lgRad', 5, 30, 1)
     }
 
-    get booStyle() {
+    get booStyle () {
       let boxShadowInitial = ''
         , phi = (Math.sqrt(5) + 1) / 2 + 3
         , goldenAngle = phi * (33 + Math.PI)
@@ -58,13 +58,13 @@
         let spiral_rad = Math.sqrt(cumArea / Math.PI)
           , x = Math.cos(angle) * spiral_rad
           , y = Math.sin(angle) * spiral_rad
-          , hue = hueIncrement * i;
+          , hue = hueIncrement * i
 
-        hue -= Math.floor(hue);
-        hue *= 360;
+        hue -= Math.floor(hue)
+        hue *= 360
 
         if (boxShadowInitial.length > 0) {
-          boxShadowInitial += ', ';
+          boxShadowInitial += ', '
         }
         boxShadowInitial += `${x}em ${y}em 0 ${smallRadius * this.fudge}em hsl(${hue}, 100%, 50%)`
       }
@@ -76,7 +76,6 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss" rel="stylesheet/scss">
 
   .boo {
@@ -91,14 +90,14 @@
   }
 
   @keyframes ani {
-   /* 0% {
-      transform: translateZ(0);
-    }
-    50% {
-      transform: translateZ(3em);
-    }
-    100% {
-      transform: translateZ(0);
-    }*/
+    /* 0% {
+       transform: translateZ(0);
+     }
+     50% {
+       transform: translateZ(3em);
+     }
+     100% {
+       transform: translateZ(0);
+     }*/
   }
 </style>

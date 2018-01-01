@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="scene" id="tunnel-scene" v-bind:style="sceneStyle">
-    <div class="wrapper" v-bind:style="wrapperStyle">
-      <ul class="tunnel">
-        <li v-for="n in countDivs" class="ring" v-bind:style="ringStyle"></li>
-      </ul>
+      <div class="wrapper" v-bind:style="wrapperStyle">
+        <ul class="tunnel">
+          <li v-for="n in countDivs" class="ring" v-bind:style="ringStyle"></li>
+        </ul>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -26,7 +26,7 @@
     wrapperTransformY = -2
     wrapperTransformX = 10
 
-    mounted() {
+    mounted () {
       // @params: object, property, min, max, step
       this.datgui.add(this, 'transformOrigin', 20, 50)
       this.datgui.add(this, 'perspective', 15, 50)
@@ -35,25 +35,25 @@
       this.datgui.add(this, 'wrapperTransformX', -100, 100).name('X translate')
     }
 
-    get ringStyle() {
+    get ringStyle () {
       return {
-        'transform-origin': this.transformOrigin + '% ' + this.transformOrigin + '%',
-      };
+        'transform-origin': this.transformOrigin + '% ' + this.transformOrigin + '%'
+      }
     }
 
-    get sceneStyle() {
+    get sceneStyle () {
       return {
-        'perspective': this.perspective + 'em',
-      };
+        'perspective': this.perspective + 'em'
+      }
     }
 
-    get wrapperStyle() {
-        let zTrans = `translateZ(${this.wrapperTransformZ}em) `
-        let yTrans = `translateY(${this.wrapperTransformY}em) `
-        let xTrans = `translateX(${this.wrapperTransformX}%)`
+    get wrapperStyle () {
+      let zTrans = `translateZ(${this.wrapperTransformZ}em) `
+      let yTrans = `translateY(${this.wrapperTransformY}em) `
+      let xTrans = `translateX(${this.wrapperTransformX}%)`
       return {
-        'transform': zTrans + yTrans + xTrans,
-      };
+        'transform': zTrans + yTrans + xTrans
+      }
     }
   }
 </script>
@@ -64,9 +64,15 @@
     @for $i from 0 through 10 {
       $percent: 0% + $i * 10;
       $zRotate: -1deg;
-      @if $i == 0 {$zRotate: 0deg;}
-      @if $i % 2 == 0 {$zRotate: 1deg;}
-      @if $i == 10 {$zRotate: 0deg;}
+      @if $i == 0 {
+        $zRotate: 0deg;
+      }
+      @if $i % 2 == 0 {
+        $zRotate: 1deg;
+      }
+      @if $i == 10 {
+        $zRotate: 0deg;
+      }
       #{$percent} {
         transform: rotateY($i * 36deg) rotateZ($zRotate);
       }
@@ -87,7 +93,7 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transform: translateZ(3em)  translateY(-2em) translateX(10%);
+    transform: translateZ(3em) translateY(-2em) translateX(10%);
   }
 
   .tunnel {
@@ -120,10 +126,10 @@
         color: hsl($clr, 100, 50);
         transform: rotateY($clr) translateX(10em);
 
-        $boxShad: 1px 1px hsl($clr , 100, 50);
+        $boxShad: 1px 1px hsl($clr, 100, 50);
         @for $j from 0 through 72 {
           $clr2: ($i+$j) *5deg;
-          $boxShad: $boxShad, -#{$j/10}px #{$j/10}px #{$j}px hsl($clr2 , 100, 50);
+          $boxShad: $boxShad, -#{$j/10}px #{$j/10}px #{$j}px hsl($clr2, 100, 50);
         }
         box-shadow: $boxShad;
       }
