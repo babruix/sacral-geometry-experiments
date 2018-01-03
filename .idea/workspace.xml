@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fc3611-d61c-4471-a8e5-8c6147ba8393" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/css/app.499661bb654b83e9476bbc5554703905.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/css/app.499661bb654b83e9476bbc5554703905.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.41d194b6ee4df9a2591c.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.41d194b6ee4df9a2591c.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.5a3d60586957fd6f2a56.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/manifest.5a3d60586957fd6f2a56.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.f0fc2b9d9e1ead8266a0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/vendor.f0fc2b9d9e1ead8266a0.js.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/css/app.5338e14f3eff7c69ff18425dd51f518a.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/css/app.5338e14f3eff7c69ff18425dd51f518a.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.a668ef56c91b8f565a6f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/app.a668ef56c91b8f565a6f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.812ca6a39881b0cdfe6f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/manifest.812ca6a39881b0cdfe6f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.3778079f88105b6b7dd8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/static/js/vendor.3778079f88105b6b7dd8.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/RainbowComponent.vue" afterPath="$PROJECT_DIR$/src/components/RainbowComponent.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SacralCircle.vue" afterPath="$PROJECT_DIR$/src/components/SacralCircle.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SunflowerComponent.vue" afterPath="$PROJECT_DIR$/src/components/SunflowerComponent.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tunnel.vue" afterPath="$PROJECT_DIR$/src/components/Tunnel.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RainbowComponent.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RainbowComponent.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/RainbowComponent.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -39,7 +52,7 @@
       <file leaf-file-name="Spiral.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Spiral.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="660">
               <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding />
             </state>
@@ -49,8 +62,8 @@
       <file leaf-file-name="SacralCircle.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/SacralCircle.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1119">
-              <caret line="101" column="3" lean-forward="true" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+            <state relative-caret-position="1980">
+              <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -61,6 +74,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
               <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="264" lean-forward="true" selection-start-line="0" selection-start-column="264" selection-end-line="0" selection-end-column="264" />
               <folding />
             </state>
           </provider>
@@ -201,10 +224,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1193" />
-    <option name="y" value="757" />
-    <option name="width" value="1362" />
-    <option name="height" value="683" />
+    <option name="x" value="175" />
+    <option name="y" value="44" />
+    <option name="width" value="1659" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -264,14 +287,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
               <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="app.499661bb654b83e9476bbc5554703905.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sacralgeom" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sacralgeom" type="b2602c69:ProjectViewProjectNode" />
@@ -294,6 +348,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Unnamed">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Unnamed" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:8080/#/" />
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
@@ -427,15 +483,18 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <list size="3">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sacralgeom/docs/index.html" />
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="npm.dev" />
       <item index="2" class="java.lang.String" itemvalue="npm.build" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="npm.dev" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
         <item index="1" class="java.lang.String" itemvalue="npm.build" />
+        <item index="2" class="java.lang.String" itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -468,7 +527,8 @@
       <workItem from="1489332775834" duration="29857000" />
       <workItem from="1489529099264" duration="844000" />
       <workItem from="1514834291088" duration="2458000" />
-      <workItem from="1514838295484" duration="2619000" />
+      <workItem from="1514838295484" duration="2679000" />
+      <workItem from="1514939859324" duration="156000" />
     </task>
     <task id="LOCAL-00001" summary="Added animation using box shadow">
       <created>1488448934536</created>
@@ -638,11 +698,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514836971465</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="small fixes">
+      <created>1514841817623</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1514841817623</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110896000" />
+    <option name="totallyTimeSpent" value="111112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,15 +721,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1193" y="757" width="1362" height="683" extended-state="0" />
-    <editor active="true" />
+    <frame x="175" y="44" width="1659" height="1046" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18649046" sideWeight="0.64484453" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15445666" sideWeight="0.6378299" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18649046" sideWeight="0.35515547" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45904762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15445666" sideWeight="0.3621701" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28286016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30669332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256785" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -730,7 +796,8 @@
     <MESSAGE value="Refactored menu to be in separated component, added styling." />
     <MESSAGE value="Small styling fixes." />
     <MESSAGE value="Add Rainbow Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Rainbow Component" />
+    <MESSAGE value="small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -813,13 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="386" lean-forward="true" selection-start-line="0" selection-start-column="386" selection-end-line="0" selection-end-column="386" />
         </state>
       </provider>
     </entry>
@@ -980,9 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="29" />
-          <folding>
-            <element signature="e#185#206#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,9 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="e#492#513#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-956">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,8 +1067,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Spiral.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="660">
           <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SacralCircle.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RainbowComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1028,18 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SacralCircle.vue">
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1119">
-          <caret line="101" column="3" lean-forward="true" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/RainbowComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="264" lean-forward="true" selection-start-line="0" selection-start-column="264" selection-end-line="0" selection-end-column="264" />
           <folding />
         </state>
       </provider>
